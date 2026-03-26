@@ -202,6 +202,7 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import { useTrafficSocket } from "./hooks/useTrafficSocket";
 import { useEffect } from "react";
+import EmergencyPage from "./components/traffic/EmergencyPage";
 
 const queryClient = new QueryClient();
 
@@ -218,6 +219,7 @@ const AppContent = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Index />} />
+        <Route path="/emergency" element={<EmergencyPage />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
